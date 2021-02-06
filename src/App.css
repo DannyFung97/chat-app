@@ -1,38 +1,238 @@
+body {
+  background-color: #282c34;
+  font-family: 'Karla', sans-serif;
+}
+
 .App {
   text-align: center;
+  /* max-width: 728px; */
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App header {
+  height: 10vh;
+  min-height: 50px;
+  color: brown;
+  position: fixed;
+  width: 100%;
+  /* max-width: 728px; */
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.colored-header {
+  background-color: #181717;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App section {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+}
+
+.pusico-login {
+  background-image: url('./assets/pusicologin.jpg');
+  background-repeat: repeat;
+  background-size: contain;
+  animation: backgroundScroll linear 800s infinite;
+}
+
+.pusico-main {
+  background-image: url('./assets/pusicochatroom.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #b8b7bc;
+  background-attachment: fixed;
+}
+
+/* .pusico-chatroom {
+  background-image: url('./assets/pusicochatroom.png');
+  background-size: min(728px, 100vw) 80vh;
+  background-color: #b8b7bc;
+} */
+
+main {
+  padding: 10px;
+  height: 80vh;
+  margin: 10vh 0 10vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+main::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+main::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+main::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+form {
+  background-color: #181717;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* max-width: 728px; */
+  display: flex;
+  font-size: 1.5rem;
+}
+
+#slogan {
+  margin: 0 auto;
+  color: brown;
+}
+
+.pulsing-text {
+  animation: pulse 1s infinite;
+}
+
+form button {
+  background-color: rgb(138, 125, 13);
+  font-family : inherit;
+}
+
+input {
+  line-height: 1.5;
+  width: 100%;
+  font-size: 1.5rem;
+  background: rgb(58, 58, 58);
   color: white;
+  outline: none;
+  border: none;
+  border-radius: 90px;
+  padding: 0 10px;
+  font-family : inherit;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  background-color: #282c34;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.25rem;
+  border-radius: 90px;
+  transition: 100ms;
+  font-family : inherit;
+  outline: none;
+  margin: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
+
+.sign-in {
+  color: #282c34;
+  background: white;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+ul, li {
+  text-align: left;
+  list-style: none;
+}
+
+p {
+  max-width: 500px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  position: relative;
+  color: white;
+  text-align: center;
+  font-family : inherit;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+}
+
+.special-button:hover {
+  animation: pop-up 200ms forwards;
+  background-color: rgb(255, 242, 129);
+  color: #282c34;
+}
+
+button:active {
+  transform: scale(1.05);
+}
+
+
+.sent {
+  flex-direction: row-reverse;
+}
+
+.sent p {
+  color: white;
+  background: rgb(138, 125, 13);
+  align-self: flex-end;
+}
+.received p {
+  background: #e5e5ea;
+  color: black;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 2px 5px;
+}
+
+@-webkit-keyframes pulse {
+
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1) }
+    50% { transform: scale(1.05) }
+    100% { transform: scale(1) }
+  }
+
+@-webkit-keyframes pop-up {
+    0% { transform: scale(1) rotate(0deg); }
+    10% { transform: scale(1.05) rotate(5deg); }
+    100% { transform: scale(1.1) rotate(-5deg); }
+  }
+
+@keyframes pop-up {
+  0% { transform: scale(1) rotate(0deg); }
+  10% { transform: scale(1.05) rotate(5deg); }
+  100% { transform: scale(1.1) rotate(-5deg); }
+}
+
+@-webkit-keyframes backgroundScroll {
+  from {background-position: 0 0;}
+  to {background-position: -10000px 0px;}
+  }
+  
+  @keyframes backgroundScroll {
+  from {background-position: 0 0;}
+  to {background-position: -10000px 0px;}
+  }
+
+  @media only screen and (max-width: 880px) {
+    .pusico-login {
+      background-size: cover;
+    }
+  }
