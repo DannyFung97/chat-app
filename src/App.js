@@ -29,12 +29,12 @@ function App() {
   const [user] = useAuthState(auth);
 
   useEffect(() => {
-    // if(!auth.currentUser){
-    //   document.getElementById('header').classList.remove('colored-header');
-    // }
-    // else{
-    //   document.getElementById('header').classList.add('colored-header');
-    // }
+    if(!auth.currentUser){
+      document.getElementById('header').classList.remove('colored-header');
+    }
+    else{
+      document.getElementById('header').classList.add('colored-header');
+    }
     if (!auth.currentUser) {
       document.getElementById('section').classList.add('pusico-login');
       document.getElementById('header').classList.remove('colored-header');

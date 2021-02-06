@@ -12,7 +12,7 @@ body {
 .App header {
   height: 10vh;
   min-height: 50px;
-  color: brown;
+  color: midnight;
   position: fixed;
   width: 100%;
   /* max-width: 728px; */
@@ -44,11 +44,12 @@ body {
 }
 
 .pusico-main {
-  background-image: url('./assets/pusicochatroom.png');
+  background-image: url('./assets/pusicochatroom.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-color: #b8b7bc;
   background-attachment: fixed;
+  background-size: 100%;
 }
 
 /* .pusico-chatroom {
@@ -91,7 +92,7 @@ form {
 
 #slogan {
   margin: 0 auto;
-  color: brown;
+  color: midnightblue;
 }
 
 .pulsing-text {
