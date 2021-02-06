@@ -87,7 +87,7 @@ function SignOut() {
   return auth.currentUser && (
     <div style={{display: 'inline'}}>
       <button className="sign-out special-button" onClick={() => auth.signOut()}>Sign Out</button>
-      <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/background-size'><button className="special-button">Github</button></a>
+      <a href='https://github.com/DannyFung97/chat-app'><button className="special-button">Github</button></a>
     </div>
   )
 }
