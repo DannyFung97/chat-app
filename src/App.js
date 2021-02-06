@@ -50,7 +50,7 @@ function App() {
   return (
     <div className="App">
       <header id='header'>
-        {!auth.currentUser ? <h1 className='pulsing-text'>Welcome to the chat, be polite!</h1>
+        {!auth.currentUser ? null
           :
           <SignOut />
         }

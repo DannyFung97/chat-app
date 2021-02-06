@@ -12,7 +12,7 @@ body {
 .App header {
   height: 10vh;
   min-height: 50px;
-  color: midnight;
+  color: midnightblue;
   position: fixed;
   width: 100%;
   /* max-width: 728px; */
@@ -44,12 +44,11 @@ body {
 }
 
 .pusico-main {
-  background-image: url('./assets/pusicochatroom.jpg');
+  background-image: url('./assets/pusicochatroom.png');
   background-repeat: no-repeat;
   background-position: center;
   background-color: #b8b7bc;
   background-attachment: fixed;
-  background-size: 100%;
 }
 
 /* .pusico-chatroom {
@@ -131,7 +130,6 @@ button {
   transition: 100ms;
   font-family : inherit;
   outline: none;
-  margin: 1rem;
 }
 
 button:disabled {
@@ -166,6 +164,10 @@ p {
 .message {
   display: flex;
   align-items: center;
+}
+
+.special-button {
+  margin: 1rem;
 }
 
 .special-button:hover {
@@ -237,3 +239,9 @@ img {
       background-size: cover;
     }
   }
+
+  /* @media only screen and (max-width: 728px) {
+  .pusico-main {
+    background-size: 100% 100%;
+  }
+} */
