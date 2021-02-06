@@ -4,6 +4,8 @@
 
 ### Visit the chat with this link: eager-mestorf-cb3f2a.netlify.app
 
+### Art is supplied to me by a friend
+
 ![](screenshots/login.png)
 
 ![](screenshots/chatroom.png)
