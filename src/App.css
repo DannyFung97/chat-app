@@ -12,10 +12,10 @@ body {
 .App header {
   height: 10vh;
   min-height: 50px;
-  color: midnightblue;
+  color: rgb(255, 169, 41);
   position: fixed;
   width: 100%;
-  /* max-width: 728px; */
+  background-color: rgba(0, 0, 0, 0.7);
   top: 0;
   display: flex;
   align-items: center;
@@ -117,9 +117,7 @@ input {
 }
 
 button {
-  background-color: #282c34;
   border: none;
-  color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;

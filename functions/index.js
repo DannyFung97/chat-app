@@ -8,22 +8,15 @@ const db = admin.firestore();
 exports.detectEvilUsers = functions.firestore
     .document('messages/{msgId}')
     .onCreate(async (doc, ctx) => {
-
         const filter = new Filter();
         const { text, uid } = doc.data();
-
         if (filter.isProfane(text)) {
-
             const cleaned = filter.clean(text);
             await doc.ref.update({ text: `Banned for saying ${cleaned}` });
-
             await db.collection('banned').doc(uid).set({});
         }
-
         const userRef = db.collection('users').doc(uid)
-
         const userData = (await userRef.get()).data();
-
         if (userData.msgCount >= 7) {
             await db.collection('banned').doc(uid).set({});
         } else {
